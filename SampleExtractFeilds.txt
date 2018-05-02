@@ -1,0 +1,7 @@
+CREATE TABLE XB_TRADE_DATA_ROW(tr_date string, tr_time string, price decimal(14,7),volume integer,market_flag string,sales_condition string,exclude_record_flag string,unfiltered_price decimal(14,7)) 
+USING com.sap.spark.engines.relational 
+OPTIONS (
+files "/data/source/dft_trading/xb_trade_data_new/XB/N/2012/2012.txt",
+tableschema "tr_date VARCHAR(10), tr_time VARCHAR(12), price decimal(14,7),volume integer,market_flag varchar(1),sales_condiion varchar(4),exclude_record_flag varchar(4),unfiltered_price decimal(14,7)",
+hdfsnamenode "dalldhmhwx01.na.xom.com:8020"
+); 
